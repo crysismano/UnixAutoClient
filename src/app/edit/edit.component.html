@@ -1,0 +1,36 @@
+
+<div class="container mt-3">
+    <form (ngSubmit)="submit()" novalidate #form="ngForm">
+        <div class="form-group row col-10">
+            <label for="InputManufacturerName" class="col-2 col-form-label">Manufacturer Name</label>
+            <div class="col-6">
+                <input type="text" [(ngModel)]="carModel.carManufacturer.name" name="manufactuerName" class="form-control" id="InputManufacturerName" required>
+            </div>
+        </div>
+        <div class="form-group row col-10">
+            <label for="InputModelName" class="col-2 col-form-label">Model Name</label>
+            <div class="col-6">
+                <input type="text" [(ngModel)]="carModel.name" name="modelName" class="form-control" id="InputModelName" required>
+            </div>
+        </div>
+        <div class="form-group row col-10">
+            <label for="InputYearOfManufacture" class="col-2 col-form-label">Year Of Manufacture</label>
+            <div class="col-6">
+                <input type="number" [(ngModel)]="carModel.modelDetail.yearOfManufacture" name="yearOfManufacture" class="form-control" id="InputYearOfManufacture" required>
+            </div>
+        </div>
+        <div class="form-group row col-10">
+            <label for="InputPrice" class="col-2 col-form-label">Price</label>
+            <div class="col-6">
+                <input type="number" [(ngModel)]="carModel.modelDetail.price" name="price" class="form-control" id="InputPrice" required>
+            </div>
+        </div>
+        <div class="form-group row col-10">
+            <label for="InputSeats" class="col-2 col-form-label">Seats</label>
+            <div class="col-6">
+                <input type="number" [(ngModel)]="carModel.modelDetail.seats" name="seats" class="form-control" id="InputSeats" required>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Confirm</button>
+    </form>
+</div>

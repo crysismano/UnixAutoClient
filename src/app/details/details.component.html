@@ -1,0 +1,48 @@
+<h1>Details</h1>
+<ng-container *ngIf="loaded">
+    <h4>Car Model</h4>
+    <hr/>
+    <dl class="row">
+        <dt class="col-2 text-right">
+            Model ID
+        </dt>
+        <dd class="col-10">
+            {{carModel.id}}
+        </dd>
+        <dt class="col-2 text-right">
+            Model Name
+        </dt>
+        <dd class="col-10">
+            {{carModel.name}}
+        </dd>
+        <dt class="col-2 text-right">
+            Manufacturer Name
+        </dt>
+        <dd class="col-10">
+            {{carModel.carManufacturer.name}}
+        </dd>
+        <dt class="col-2 text-right">
+            Year of Manufacture
+        </dt>
+        <dd class="col-10">
+            {{carModel.modelDetail.yearOfManufacture}}
+        </dd>
+        <dt class="col-2 text-right">
+            Price
+        </dt>
+        <dd class="col-10">
+            {{carModel.modelDetail.price}}
+        </dd>
+        <dt class="col-2 text-right">
+            Seats
+        </dt>
+        <dd class="col-10">
+            {{carModel.modelDetail.seats}}
+        </dd>
+    </dl>
+    <div>
+        <a [routerLink]="['/']" (click)="onDelete()">Delete</a> |
+        <a [routerLink]="['/edit', carModel?.id]">Edit</a> |
+        <a [routerLink]="['/']">Back</a>
+    </div>
+</ng-container>
